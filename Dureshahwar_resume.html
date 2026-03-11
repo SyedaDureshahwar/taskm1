@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syeda Dureshahwar | Portfolio</title>
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+.logo{
+color:#38bdf8;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+}
+
+.menu-btn{
+display:none;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1 span{
+color:#38bdf8;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* Sections */
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.skill-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.skill-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+}
+
+.social{
+margin-top:20px;
+font-size:24px;
+}
+
+.social a{
+color:white;
+margin:10px;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#020617;
+position:absolute;
+top:60px;
+right:20px;
+padding:20px;
+}
+
+.menu-btn{
+display:block;
+cursor:pointer;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+<h2 class="logo">Dureshahwar</h2>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+</nav>
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+<div class="hero-text">
+<h1>Hello, I'm <span>Syeda Dureshahwar</span></h1>
+
+<p>
+BSCS Student | UX/UI Designer | Web Developer
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a BSCS student passionate about web development,
+UX/UI design and AI based applications.
+I enjoy building responsive websites and intelligent
+applications that solve real world problems.
+</p>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill-container">
+
+<div class="skill-card">HTML</div>
+<div class="skill-card">CSS</div>
+<div class="skill-card">JavaScript</div>
+<div class="skill-card">React</div>
+<div class="skill-card">Python</div>
+<div class="skill-card">Django</div>
+<div class="skill-card">UI/UX</div>
+<div class="skill-card">Figma</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-container">
+
+<div class="project-card">
+<h3>Text Summarization System</h3>
+<p>
+A Django based NLP system that summarizes long documents
+using transformer models.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Ecommerce Store</h3>
+<p>
+A fully responsive ecommerce website built using
+React, Tailwind CSS and Redux.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Sentiment Analysis</h3>
+<p>
+An NLP system that analyzes ecommerce reviews
+and predicts sentiment using machine learning.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: syedadureshahwarnaqvi@gmail.com</p>
+
+<div class="social">
+
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-github"></i></a>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>© 2026 Syeda Dureshahwar</p>
+</footer>
+
+
+<script >
+    const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
